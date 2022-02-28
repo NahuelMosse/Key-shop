@@ -17,7 +17,9 @@ class key {
         container.innerHTML += "<h5>Id: " + this.id + "</h5>";
         container.innerHTML += "<h4>$" + this.price + "</h4>";
 
-        container.setAttribute("onclick","changeHiddenValue(" + this.id + ")");
+        container.addEventListener("click",()=>{
+            changeHiddenValue(this.id);
+        })
 
         fragment.appendChild(container);
     }
